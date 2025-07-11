@@ -1,0 +1,19 @@
+h1{
+    color: black;
+    text-align: center;
+}
+.news-card-container{
+    border: 3px black solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news-card{
+    margin: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
