@@ -1,0 +1,11 @@
+# Python environments
+script/venv/
+backend/venv/
+
+# Bytecode
+__pycache__/
+*.pyc
+
+# System junk
+*.log
+*.DS_Store
