@@ -21,7 +21,7 @@ def scrape_news():
     descriptions = []
     dates = []
     categories = []
-
+    data = []
     containers = driver.find_elements(by='xpath',value='//div[@class = "sc-cb78bbba-1 fYSNbR"]')
 
     for container in containers:
@@ -31,22 +31,15 @@ def scrape_news():
             date = container.find_element(by='xpath',value='.//span[@class = "sc-ac6bc755-1 gxJSVz"]').text
             category = container.find_element(by='xpath',value='.//span[@class = "sc-ac6bc755-2 ivCQgh"]').text
 
-            titles.append(title)
-            descriptions.append(description)
-            dates.append(date)
-            categories.append(category)
+            if all([title, description, date, category]):
+                data.append({
+                    'title':title,
+                    'description' : description,
+                    'date' : date,
+                    'category':category
+                })
         except Exception as e:
             print(e)
 
     driver.quit()
-
-
-    data = []
-    for i in range(len(titles)):
-        data.append({
-            'title':titles[i],
-            'description':descriptions[i],
-            'date':dates[i],
-            'category':categories[i]
-        })
     return data
