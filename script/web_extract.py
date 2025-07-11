@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-import pandas as pd
 
 # Container - //div[@class = "sc-cb78bbba-1 fYSNbR"]
 # Title - //div[@class = 'sc-666b6d83-0 jSTfiy"]//h2
