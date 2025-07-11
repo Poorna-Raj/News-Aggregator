@@ -40,11 +40,13 @@ def scrape_news():
 
     driver.quit()
 
-    data = {
-        'title' : titles,
-        'description' : descriptions,
-        'date': dates,
-        'category': categories
-    }        
 
+    data = []
+    for i in range(len(titles)):
+        data.append({
+            'title':titles[i],
+            'description':descriptions[i],
+            'date':dates[i],
+            'category':categories[i]
+        })
     return data
