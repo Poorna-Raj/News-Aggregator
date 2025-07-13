@@ -18,8 +18,10 @@ function NewsCard({ newsSets }: newsCardProps) {
           <div key={index} className="news-card">
             <h3 className="news-card-title">{newsSet.title}</h3>
             <p className="news-card-description">{newsSet.description}</p>
-            <p className="news-card-date">{newsSet.date}</p>
-            <p className="news-card-catefory">{newsSet.category}</p>
+            <div className="news-card-footer">
+              <p className="news-card-date">{newsSet.date}</p>
+              <p className="news-card-category">{newsSet.category}</p>
+            </div>
           </div>
         ))}
       </div>

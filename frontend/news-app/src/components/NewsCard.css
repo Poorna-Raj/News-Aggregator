@@ -43,12 +43,14 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
     color: #222;
+    text-align: center;
 }
 
 /* Description */
 .news-card-description {
     font-size: 0.95rem;
     color: #444;
+    text-align: justify;
 }
 
 /* Date */
@@ -63,4 +65,11 @@ h1 {
     font-size: 0.85rem;
     color: #0066cc;
     font-weight: 500;
+}
+
+.news-card-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    justify-content: space-between;
 }
