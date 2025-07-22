@@ -45,14 +45,14 @@ def scrape_news():
         print(f'Something went wrong while closing the button {e}')
 
     data = []
-    containers = driver.find_elements(by='xpath',value='//div[@class = "sc-cb78bbba-1 fYSNbR"]')
+    containers = driver.find_elements(by='xpath',value='//div[contains(@class , "jSTfiy")]')
 
     for container in containers:
         try:
             title = container.find_element(by='xpath',value='.//h2').text
             description = container.find_element(by='xpath',value='.//p').text
-            date = container.find_element(by='xpath',value='.//span[contains(@class, "gxJSVz")]').text
-            category = container.find_element(by='xpath',value='.//span[contains(@class, "ivCQgh")]').text
+            date = container.find_element(by='xpath',value='.//span[contains(@class, "iFYhEd")]').text
+            category = container.find_element(by='xpath',value='.//span[contains(@class, "hNeWKH")]').text
 
             if all([title, description, date, category]):
                 data.append({
